@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <form>
-        <div class="form-row">
-            <div class="col">
-                <label for="firstName">First Name</label>    
-                <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName">
-            </div>
-            <div class="col">
-                <label for="lastName">Last Name</label>    
-                <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" name="lastName">
-            </div>
-            <div class="col">
-                <label for="email">Email Address</address></label>
-                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
-            </div>
-            <div class="col">
-                <label for="pswd">Enter Password</label>
-                <input type="password" id="pswd" placeholder="Enter password" name="pswd" minlength="8" maxlength="25">
-            </div>
-            <div class="col">
-               <label for="dob">Enter Birthday</address></label>
-               <input type="date" class="form-control" id="dob" placeholder="Enter Date of Birth" name="dob">
-           </div>
-           <div class="col">
-            <label for="hobbies">What do you do in your spare time:</label>
-                <select id="hobbies" name="hobbies" size="8" multiple>
-                <option value="newinterest">Learn something new</option>
-                <option value=">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
-                <option value="audi">Audi</option>
-                <option value="audi">Audi</option>
-                <option value="audi">Audi</option>
-                <option value="audi">Audi</option>
-                </select>
-           </div>
-        </div>
+  <main>
+    <h1>Registration Form</h1>
+    <form id="registerForm">
+      <div class="form-row">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="form-row">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" required>
+      </div>
+
+      <div class="form-row">
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+      </div>
+
+      <fieldset class="form-row">
+        <legend>Interests:</legend>
+        <label><input type="checkbox" name="interest" value="Music"> Music</label>
+        <label><input type="checkbox" name="interest" value="Sports"> Sports</label>
+        <label><input type="checkbox" name="interest" value="Movies"> Movies</label>
+        <label><input type="checkbox" name="interest" value="Travel"> Cooking</label>
+        <label><input type="checkbox" name="interest" value="Travel"> Dancing</label>
+        <label><input type="checkbox" name="interest" value="Travel"> Video Gaming</label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
     </form>
 
+    <div id="output"></div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
